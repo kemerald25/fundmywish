@@ -1,7 +1,7 @@
 {
-    "name": "FundMyWish - The Web3 Job Marketplace",
+    "name": "FundMyWish - Web3 Crowdfunding Platform",
     "short_name": "FundMyWish",
-    "description": "A decentralized marketplace connecting Web3 talent with innovative projects. Find your next opportunity or hire top-tier professionals.",
+    "description": "Turn dreams into reality through decentralized crowdfunding. Create wishes, fund community goals, and support others on the Base blockchain.",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#0A090F",
