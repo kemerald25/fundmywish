@@ -1,0 +1,13 @@
+{
+    "rewrites": [
+      {
+        "source": "/wish/:id",
+        "destination": "/api/frame-handler?path=wish/:id"
+      }
+    ],
+    "functions": {
+      "api/frame-handler.js": {
+        "runtime": "nodejs18.x"
+      }
+    }
+  }

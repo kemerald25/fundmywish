@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+  useLocation
+} from "react-router-dom";
 import { Wish } from "./types";
 import { AuthProvider, useAuth } from "./hooks/useAuth";
 import { WishProvider } from "./hooks/useWishes";
@@ -8,10 +14,12 @@ import Wishlist from "./components/Wishlist";
 import WishPage from "./components/WishPage";
 import CreateWishModal from "./components/CreateWishModal";
 import ContributeModal from "./components/ContributeModal";
+import FrameMeta from "./components/FrameMeta";
 import { sdk } from "@farcaster/miniapp-sdk";
 
 const AppContent: React.FC = () => {
   const { user } = useAuth();
+  const location = useLocation();
   const [isCreateModalOpen, setCreateModalOpen] = useState(false);
   const [isContributeModalOpen, setContributeModalOpen] = useState(false);
   const [selectedWish, setSelectedWish] = useState<Wish | null>(null);
@@ -20,6 +28,7 @@ const AppContent: React.FC = () => {
     const notifySDKReady = async () => {
       try {
         console.log("Notifying Farcaster SDK that app is ready...");
+        console.log("Current location:", location.pathname);
         await sdk.actions.ready();
         console.log("Farcaster SDK ready signal sent!");
       } catch (error) {
@@ -28,7 +37,7 @@ const AppContent: React.FC = () => {
     };
 
     notifySDKReady();
-  }, []);
+  }, [location.pathname]);
 
   const handleOpenContributeModal = (wish: Wish) => {
     setSelectedWish(wish);
@@ -48,13 +57,18 @@ const AppContent: React.FC = () => {
       <Header onCreateWish={handleOpenCreateModal} />
       <main className="container mx-auto">
         <Routes>
-          <Route 
-            path="/" 
-            element={<Wishlist onContribute={handleOpenContributeModal} />} 
+          <Route
+            path="/"
+            element={
+              <>
+                <FrameMeta />
+                <Wishlist onContribute={handleOpenContributeModal} />
+              </>
+            }
           />
-          <Route 
-            path="/wish/:id" 
-            element={<WishPage onContribute={handleOpenContributeModal} />} 
+          <Route
+            path="/wish/:id"
+            element={<WishPage onContribute={handleOpenContributeModal} />}
           />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
