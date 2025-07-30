@@ -15,7 +15,7 @@ export default defineConfig(({ mode }) => {
       },
       server: {
         allowedHosts: [
-          'https://7037e724ce59.ngrok-free.app'
+          '.ngrok-free.app'
         ]
       }
     };

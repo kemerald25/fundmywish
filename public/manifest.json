@@ -8,13 +8,13 @@
     "theme_color": "#0A090F",
     "icons": [
       {
-        "src": "/logo.png",
+        "src": "https://fundmywish.vercel.app/logo.png",
         "sizes": "192x192",
         "type": "image/png",
         "purpose": "any maskable"
       },
       {
-        "src": "/logo.png",
+        "src": "https://fundmywish.vercel.app/logo.png",
         "sizes": "512x512",
         "type": "image/png",
         "purpose": "any maskable"
