@@ -4,7 +4,7 @@ import {
   Routes,
   Route,
   Navigate,
-  useLocation
+  useLocation,
 } from "react-router-dom";
 import { Wish } from "./types";
 import { AuthProvider, useAuth } from "./hooks/useAuth";

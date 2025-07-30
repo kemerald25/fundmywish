@@ -18,19 +18,19 @@ const FrameMeta: React.FC<FrameMetaProps> = ({ wishId, wishName }) => {
 
     // Clean up the pathname to remove leading slash for proper URL construction
     const cleanPath = location.pathname.startsWith('/') ? location.pathname.slice(1) : location.pathname;
-    const frameUrl = cleanPath ? `https://fundmywish.vercel.app/${cleanPath}` : 'https://fundmywish.vercel.app/';
+    const frameUrl = cleanPath ? `https://a656b26e37ee.ngrok-free.app/${cleanPath}` : 'https://a656b26e37ee.ngrok-free.app/';
 
     // Create new frame metadata
     const frameMetadata = {
       version: "next",
-      imageUrl: "https://fundmywish.vercel.app/wish.png",
+      imageUrl: "https://a656b26e37ee.ngrok-free.app/wish.png",
       button: {
         title: wishName ? `Fund: ${wishName}` : "Fund A Wish",
         action: {
           type: "launch_frame",
           name: "FundMyWish",
           url: frameUrl,
-          splashImageUrl: "https://fundmywish.vercel.app/wish2.png",
+          splashImageUrl: "https://a656b26e37ee.ngrok-free.app/wish2.png",
           splashBackgroundColor: "#ffffff"
         }
       }

@@ -19,20 +19,11 @@ const WishPage: React.FC<WishPageProps> = ({ onContribute }) => {
   const [wish, setWish] = useState<Wish | null>(null);
 
   useEffect(() => {
-    console.log('WishPage useEffect:', { id, loading, wishesCount: wishes.length });
-    
     if (!loading && wishes.length > 0 && id) {
       const foundWish = wishes.find(w => w.id === id);
-      console.log('Found wish:', foundWish);
       setWish(foundWish || null);
     }
   }, [wishes, loading, id]);
-
-  // Additional debug effect
-  useEffect(() => {
-    console.log('WishPage mounted with ID:', id);
-    console.log('Current URL:', window.location.href);
-  }, [id]);
 
   if (loading) {
     return (
@@ -47,11 +38,7 @@ const WishPage: React.FC<WishPageProps> = ({ onContribute }) => {
       <div className="text-center py-16">
         <FrameMeta />
         <h2 className="text-2xl font-bold mb-4 text-white">Wish Not Found</h2>
-        <p className="text-gray-400 mb-6">
-          The wish you're looking for doesn't exist or has been removed.
-          <br />
-          <small className="text-xs">Debug: ID = {id}, Wishes loaded = {wishes.length}</small>
-        </p>
+        <p className="text-gray-400 mb-6">The wish you're looking for doesn't exist or has been removed.</p>
         <button
           onClick={() => navigate('/')}
           className="bg-base-blue text-white font-bold py-3 px-6 rounded-lg hover:bg-base-blue-dark transition-colors"
