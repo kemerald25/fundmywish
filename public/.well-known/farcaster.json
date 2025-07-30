@@ -24,7 +24,7 @@
     "ogTitle": "FundMyWish - Crowdfunding",
     "ogDescription": "Web3 wish crowdfunding app",
     "ogImageUrl": "https://fundmywish.vercel.app/wish2.png",
-    "requiredChains": ["eip155:84532"]
+    "requiredChains": ["eip155:8453"]
   },
   "requiredCapabilities": ["actions.signIn", "wallet.getEthereumProvider"]
 }

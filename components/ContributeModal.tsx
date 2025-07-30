@@ -42,11 +42,11 @@ const ContributeModal: React.FC<ContributeModalProps> = ({ isOpen, onClose, wish
       const paymentResponse = await pay({
         amount: parseFloat(amount).toFixed(2),
         to: wish.creatorAddress,
-        testnet: true,
+        testnet: false,
       });
 
       // Poll for status
-      let statusCheck = await getPaymentStatus({ id: paymentResponse.id, testnet: true });
+      let statusCheck = await getPaymentStatus({ id: paymentResponse.id, testnet: false });
       if (statusCheck.status === 'completed') {
         await addContribution(wish.id, parseFloat(amount), user);
         onClose();

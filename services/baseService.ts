@@ -127,7 +127,7 @@ try {
       capabilities: {
         signInWithEthereum: {
           nonce,
-          chainId: '0x14a34' // Base Sepolia 84532
+          chainId: '0x2105' // Base Sepolia 8453
         }
       }
     }]
