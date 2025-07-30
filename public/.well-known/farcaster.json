@@ -20,9 +20,9 @@
     "primaryCategory": "social",
     "tags": ["crowdfund", "base", "social", "wishes", "funding"],
     "heroImageUrl": "https://fundmywish.vercel.app/logo.png",
-    "tagline": "Get Funded, Gift Someone their wish",
-    "ogTitle": "FundMyWish - Web3 Crowdfunding Platform",
-    "ogDescription": "Turn dreams into reality through decentralized crowdfunding. Create wishes, fund dreams, and build community on Base blockchain.",
+    "tagline": "Fund wishes, grant dreams",
+    "ogTitle": "FundMyWish - Crowdfunding",
+    "ogDescription": "Web3 wish crowdfunding app",
     "ogImageUrl": "https://fundmywish.vercel.app/logo.png",
     "requiredChains": ["eip155:84532"]
   },
