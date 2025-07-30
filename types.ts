@@ -4,6 +4,12 @@ export interface User {
   address: string;
 }
 
+export interface Contributor {
+  address: string;
+  amount: number;
+  timestamp: number;
+}
+
 export interface Contribution {
   id: string; // Document ID from Firestore
   amount: number;
@@ -19,6 +25,7 @@ export interface Wish {
   targetAmount: number;
   currentAmount: number;
   createdAt?: Timestamp; // Firestore Server Timestamp
+  contributors?: Contributor[]; // Add this field
 }
 
 // For creating a new wish, we don't have the id etc.

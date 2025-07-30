@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react"; // Import useEffect
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { Wish } from "./types";
 import { AuthProvider, useAuth } from "./hooks/useAuth";
 import { WishProvider } from "./hooks/useWishes";
 import Header from "./components/Header";
 import Wishlist from "./components/Wishlist";
+import WishPage from "./components/WishPage";
 import CreateWishModal from "./components/CreateWishModal";
 import ContributeModal from "./components/ContributeModal";
-
-// Import the Farcaster MiniApp SDK
 import { sdk } from "@farcaster/miniapp-sdk";
 
 const AppContent: React.FC = () => {
@@ -16,7 +16,6 @@ const AppContent: React.FC = () => {
   const [isContributeModalOpen, setContributeModalOpen] = useState(false);
   const [selectedWish, setSelectedWish] = useState<Wish | null>(null);
 
-  // Use useEffect to call sdk.actions.ready() once the component mounts
   useEffect(() => {
     const notifySDKReady = async () => {
       try {
@@ -29,7 +28,7 @@ const AppContent: React.FC = () => {
     };
 
     notifySDKReady();
-  }, []); // Empty dependency array ensures this runs only once after initial render
+  }, []);
 
   const handleOpenContributeModal = (wish: Wish) => {
     setSelectedWish(wish);
@@ -48,7 +47,17 @@ const AppContent: React.FC = () => {
     <div className="min-h-screen bg-brand-dark">
       <Header onCreateWish={handleOpenCreateModal} />
       <main className="container mx-auto">
-        <Wishlist onContribute={handleOpenContributeModal} />
+        <Routes>
+          <Route 
+            path="/" 
+            element={<Wishlist onContribute={handleOpenContributeModal} />} 
+          />
+          <Route 
+            path="/wish/:id" 
+            element={<WishPage onContribute={handleOpenContributeModal} />} 
+          />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </main>
       <CreateWishModal
         isOpen={isCreateModalOpen}
@@ -65,11 +74,13 @@ const AppContent: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    <AuthProvider>
-      <WishProvider>
-        <AppContent />
-      </WishProvider>
-    </AuthProvider>
+    <Router>
+      <AuthProvider>
+        <WishProvider>
+          <AppContent />
+        </WishProvider>
+      </AuthProvider>
+    </Router>
   );
 };
 

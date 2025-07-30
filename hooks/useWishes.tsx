@@ -52,7 +52,7 @@ export const WishProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   
   useEffect(() => {
     // A check to prevent connecting to Firebase without configuration
-    if (db.app.options.apiKey !== 'YOUR_API_KEY') {
+    if (db.app.options.apiKey !== process.env.REACT_APP_FIREBASE_API_KEY) {
         fetchWishes();
     } else {
         console.warn("Firebase config is not set. Please update services/firebase.ts");
