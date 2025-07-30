@@ -1,8 +1,8 @@
 {
   "accountAssociation": {
-    "header": "eyJmaWQiOjkwMDU4NCwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDdkRTU2Q0Y1MjhkNzgzNTU4Mjg1ZjEwYTA1ZDJkZDk0N0ZlYUVjNjQifQ",
-    "payload": "eyJkb21haW4iOiJ0YWwzbnQueHl6In0",
-    "signature": "MHg1YTc2ZTE1ZGUwZTBjMGZhYTA3ZTk2M2JjOTgwMzYzMzg5Y2JjOWYyMDM3ZTEwYjA2MWFiYjFiYTdhY2ZhODEzMDk3Mzc0MDExMTU2ODBiYWJiMDYwZTcwYzgxNTgxMTEyZmRjZTc3ZmQ2YWM0MzE5MDEzNzUxZDI3OTQ2NmMxMjFj"
+    "header": "eyJmaWQiOjkwMDU4NCwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDZmOUFkMWNkM0RjRjI3MUM2OTY0ZDA2NThkYjU2QjM2ZDYyNDYxM2IifQ",
+    "payload": "eyJkb21haW4iOiJmdW5kbXl3aXNoLnZlcmNlbC5hcHAifQ",
+    "signature": "MHhjZmY5ZDA4OTAxYWUyNGNmMjhlOGNkNDZlZjBhNTE1MDQ1ZDlkMWQ3Y2ExMWY5M2E1ZWJlNzI0N2EyODg5OGM4MDk5YzFhN2I3MGY3MGEzNGNjMjVmMzAzZGQ3NzJiNzdmYWM2NDRkMjRmYzkxMmY1MzBhNjZiZTEyYmJkNzAwNzFj"
   },
   "frame": {
     "name": "FundMyWish",
@@ -14,17 +14,17 @@
     "splashImageUrl": "https://fundmywish.vercel.app/logo.png",
     "splashBackgroundColor": "#0A090F",
     "webhookUrl": "https://fundmywish.vercel.app/",
-    "subtitle": "Get your web3 Job in a click",
-    "description": "Experience the future of getting a web3 job",
+    "subtitle": "Turn dreams into reality through Web3 crowdfunding",
+    "description": "Create wishes, fund dreams, and build community through decentralized crowdfunding on Base",
     "screenshotUrls": ["https://fundmywish.vercel.app/logo.png"],
     "primaryCategory": "social",
-    "tags": ["job", "monad", "social"],
+    "tags": ["crowdfund", "base", "social", "wishes", "funding"],
     "heroImageUrl": "https://fundmywish.vercel.app/logo.png",
-    "tagline": "Get Job, Create Job with ease",
-    "ogTitle": "FundMyWish-WEB3 job marketplace",
-    "ogDescription": "Decentralized platform connecting Web3 talent with innovative projects",
+    "tagline": "Get Funded, Gift Someone their wish",
+    "ogTitle": "FundMyWish - Web3 Crowdfunding Platform",
+    "ogDescription": "Turn dreams into reality through decentralized crowdfunding. Create wishes, fund dreams, and build community on Base blockchain.",
     "ogImageUrl": "https://fundmywish.vercel.app/logo.png",
-    "requiredChains": ["eip155:10143"]
+    "requiredChains": ["eip155:84532"]
   },
   "requiredCapabilities": ["actions.signIn", "wallet.getEthereumProvider"]
 }
