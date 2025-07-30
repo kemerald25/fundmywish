@@ -2,7 +2,7 @@
     "rewrites": [
       {
         "source": "/wish/:id",
-        "destination": "/api/frame-handler?path=wish/:id"
+        "destination": "/api/frame-handler?id=:id"
       }
     ],
     "functions": {
@@ -11,3 +11,4 @@
       }
     }
   }
+  
