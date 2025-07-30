@@ -1,0 +1,23 @@
+{
+    "name": "FundMyWish - The Web3 Job Marketplace",
+    "short_name": "FundMyWish",
+    "description": "A decentralized marketplace connecting Web3 talent with innovative projects. Find your next opportunity or hire top-tier professionals.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0A090F",
+    "theme_color": "#0A090F",
+    "icons": [
+      {
+        "src": "/logo.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/logo.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ]
+  }

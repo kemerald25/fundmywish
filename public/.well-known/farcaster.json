@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "eyJmaWQiOjkwMDU4NCwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDdkRTU2Q0Y1MjhkNzgzNTU4Mjg1ZjEwYTA1ZDJkZDk0N0ZlYUVjNjQifQ",
+    "payload": "eyJkb21haW4iOiJ0YWwzbnQueHl6In0",
+    "signature": "MHg1YTc2ZTE1ZGUwZTBjMGZhYTA3ZTk2M2JjOTgwMzYzMzg5Y2JjOWYyMDM3ZTEwYjA2MWFiYjFiYTdhY2ZhODEzMDk3Mzc0MDExMTU2ODBiYWJiMDYwZTcwYzgxNTgxMTEyZmRjZTc3ZmQ2YWM0MzE5MDEzNzUxZDI3OTQ2NmMxMjFj"
+  },
+  "frame": {
+    "name": "FundMyWish",
+    "version": "1",
+    "iconUrl": "https://tal3nt.xyz/logo.png",
+    "homeUrl": "https://tal3nt.xyz",
+    "imageUrl": "https://tal3nt.xyz/logo.png",
+    "buttonTitle": "Start",
+    "splashImageUrl": "https://tal3nt.xyz/logo.png",
+    "splashBackgroundColor": "#0A090F",
+    "webhookUrl": "https://tal3nt.xyz/",
+    "subtitle": "Get your web3 Job in a click",
+    "description": "Experience the future of getting a web3 job",
+    "screenshotUrls": ["https://tal3nt.xyz/logo.png"],
+    "primaryCategory": "social",
+    "tags": ["job", "monad", "social"],
+    "heroImageUrl": "https://tal3nt.xyz/hero.png",
+    "tagline": "Get Job, Create Job with ease",
+    "ogTitle": "FundMyWish-WEB3 job marketplace",
+    "ogDescription": "Decentralized platform connecting Web3 talent with innovative projects",
+    "ogImageUrl": "https://tal3nt.xyz/logo.png",
+    "requiredChains": ["eip155:10143"]
+  },
+  "requiredCapabilities": ["actions.signIn", "wallet.getEthereumProvider"]
+}
