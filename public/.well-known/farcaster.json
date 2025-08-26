@@ -26,5 +26,8 @@
     "ogImageUrl": "https://fundmywish.vercel.app/wish2.png",
     "requiredChains": ["eip155:8453"]
   },
-  "requiredCapabilities": ["actions.signIn", "wallet.getEthereumProvider"]
+  "requiredCapabilities": ["actions.signIn", "wallet.getEthereumProvider"],
+   "baseBuilder": {
+    "allowedAddresses": ["0x864c0A504da4ef27EE12b8197780e7067133587b"]
+  }
 }
